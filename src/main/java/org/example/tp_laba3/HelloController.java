@@ -48,7 +48,7 @@ public class HelloController implements Initializable {
             shape.draw(gc);
             newMemento();
         }
-    }     //нажали на кнопку цвета
+    }
 
     public void onMouse(MouseEvent mouseEvent) {    //рисование фигуры
         x = mouseEvent.getX();
@@ -61,30 +61,6 @@ public class HelloController implements Initializable {
 
         newMemento();
     }
-//
-//    public void onMouseDragOver(MouseDragEvent mouseDragEvent) {
-//        if (shape!=null){
-//            x = mouseDragEvent.getX();
-//            y = mouseDragEvent.getY();
-//
-//            shape = shapeFactory.createShape(Integer.parseInt(text_choose_shape.getText()),picker.getValue(), x, y );
-//            gc = canvas.getGraphicsContext2D();
-//        }
-//    }
-
-    //@FXML
-//    public void handleMouseDragged(MouseEvent mouseEvent) {
-////        Point2D localPos = shape.sceneToLocal(new Point2D(event.getX(), event.getY()));
-////        shape.setSize(localPos.getX(), localPos.getY());
-//        if (this.shape != null) {
-//            this.isDragging = true;
-//            double newX = mouseEvent.getX() - this.dragOffsetX;
-//            double newY = mouseEvent.getY() - this.dragOffsetY;
-//            this.shape.setPosition(newX, newY);
-//            this.gc.clearRect(0.0, 0.0, this.canvas.getWidth(), this.canvas.getHeight());
-//            this.shape.draw(this.gc);
-//        }
-//    }
 
     private double startX, startY, startWidth, startHeight;
     private boolean isResizing = false;
@@ -98,9 +74,6 @@ public class HelloController implements Initializable {
             shape.setPosition(dragOffsetX, dragOffsetY);
             gc.clearRect(0, 0, canvas.getWidth(), canvas.getHeight());
             shape.draw(gc);
-            // dragOffsetX = x - shape.getX();
-            // dragOffsetY = y - shape.getY();
-
         } else {
             // Начало растяжения фигуры
             isResizing = true;
@@ -122,15 +95,10 @@ public class HelloController implements Initializable {
            gc.clearRect(0, 0, canvas.getWidth(), canvas.getHeight());
            shape.draw(gc);
         }
-
     }
-
-//        gc.clearRect(0, 0, canvas.getWidth(), canvas.getHeight());
-//        shape.draw(gc);
 
     public void newMemento(){
         temp = new Memento(shape);
         memoSelect.push(temp);
     }
-
 }

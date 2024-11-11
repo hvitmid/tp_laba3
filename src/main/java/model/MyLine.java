@@ -15,7 +15,7 @@ public class MyLine extends MyShape{
 
     @Override
     public void draw(GraphicsContext gc) {
-        gc.setStroke(color);      //цвет линии меняется с помощью Stroke
+        gc.setStroke(color);
         gc.strokeLine(x, y, length, angle);
     }
 }

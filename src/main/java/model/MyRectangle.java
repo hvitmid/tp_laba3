@@ -8,7 +8,6 @@ public class MyRectangle extends MyShape{
     double width;
 
     public MyRectangle(Color color, double x, double y, double height, double width) {
-        // calling Shape constructor
         super(color, x, y);
         this.height = height;
         this.width = width;  }

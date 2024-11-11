@@ -4,7 +4,7 @@ import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.paint.Color;
 
 abstract public class MyShape {
-    public Color color;   //параметры фигуры - приватные поля
+    public Color color;
     protected double x, y, width, height ;
 
     public MyShape(Color color, double x, double y) {
@@ -14,7 +14,6 @@ abstract public class MyShape {
         this.height = 5;
         this.width = 5;
     }
-    //добавить геттеры сеттеры
 
     public abstract void draw( GraphicsContext gc);  // конструктор
 
