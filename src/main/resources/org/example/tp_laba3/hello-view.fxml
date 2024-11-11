@@ -9,10 +9,9 @@
     <padding>
         <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
     </padding>
-   <Canvas fx:id="canvas" height="368.0" width="388.0" />
+   <Canvas fx:id="canvas" height="368.0" onMouseClicked="#onMouse" onMouseDragged="#onMouseDragged" onMouseReleased="#onMouseReleased" width="775.0" />
 
     <Label fx:id="welcomeText" text="Выберите фигуру:" />
    <TextField fx:id="text_choose_shape" prefWidth="780.0" />
    <ColorPicker fx:id="picker" onAction="#onColorButtonClick" prefHeight="25.0" prefWidth="181.0" />
-    <Button onAction="#onButtonClick" text="Нарисовать" />
 </VBox>

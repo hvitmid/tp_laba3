@@ -4,27 +4,22 @@ import javafx.scene.paint.Color;
 
 public class MyRectangle extends MyShape{
 
-    double length;
+    double height;
     double width;
-    public MyRectangle(Color color, double length, double width) {
-        // calling Shape constructor
-        super(color);
-        this.length = length;
-        this.width = width;  }
 
-    @Override
-    double area() {
-        return length*width;   }
+    public MyRectangle(Color color, double x, double y, double height, double width) {
+        // calling Shape constructor
+        super(color, x, y);
+        this.height = height;
+        this.width = width;  }
 
     @Override
     public void draw(GraphicsContext gc) {
         gc.setFill(color);
-        gc.fillRect(0, 0, length, width);
+        gc.fillRect(x, y, height, width);
     }
-
-    @Override
-    public String toString() {
-        return "Цвет прямоугольника: " + super.color +  "и площадь: " + area();
+    public boolean contains(double x, double y) {
+        return x >= this.x && x <= this.x + height &&
+                y >= this.y && y <= this.y + width;
     }
-
 }

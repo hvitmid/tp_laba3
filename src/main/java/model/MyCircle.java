@@ -6,25 +6,21 @@ public class MyCircle extends MyShape{
 
     double length;
     double width;
-    public MyCircle(Color color, double length, double width) {
-        // calling Shape constructor
-        super(color);
+    public MyCircle(Color color, double x, double y, double length, double width) {
+        super(color, x, y);
         this.length = length;
         this.width = width;  }
 
     @Override
-    double area() {
-        return Math.PI*length*width;   }        //формула площади круга
-
-    @Override
     public void draw(GraphicsContext gc) {
         gc.setFill(color);
-        gc.fillOval(0, 0, length, width);
+        gc.fillOval(x, y, length, width);
     }
-
-    @Override
-    public String toString() {
-        return "Цвет круга: " + super.color +  "и площадь: " + area();
+    public boolean contains(double x, double y) {
+        double a = length / 2;
+        double b = width / 2;
+        return ((x - this.x) * (x - this.x)) / (a * a) +
+                ((y - this.y) * (y - this.y)) / (b * b) <= 1;
     }
 
 }
