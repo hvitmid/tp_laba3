@@ -7,8 +7,9 @@ public class MyLine extends MyShape{
     public double length;
     public double angle;
 
-    public MyLine(Color color, double x, double y, double length, double angle) {
-        super(color, x, y);
+    public MyLine(double x, double y, double length, double angle) {
+        super(x, y);
+        this.color = getColor();
         this.length = length;
         this.angle = angle;
         }

@@ -7,8 +7,9 @@ public class MyRectangle extends MyShape{
     double height;
     double width;
 
-    public MyRectangle(Color color, double x, double y, double height, double width) {
-        super(color, x, y);
+    public MyRectangle(double x, double y, double height, double width) {
+        super(x, y);
+        this.color = getColor();
         this.height = height;
         this.width = width;  }
 

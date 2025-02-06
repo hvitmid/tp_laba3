@@ -5,13 +5,15 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<VBox alignment="CENTER" prefHeight="680.0" prefWidth="820.0" spacing="20.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.tp_laba3.HelloController">
+<VBox alignment="CENTER" prefHeight="680.0" prefWidth="820.0" spacing="20.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.tp_laba3.HelloController">
     <padding>
         <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
     </padding>
+   <ListView fx:id="listView" onMouseClicked="#onListview" prefHeight="84.0" prefWidth="780.0" />
    <Canvas fx:id="canvas" height="368.0" width="775.0" />
 
     <Label fx:id="welcomeText" text="Выберите фигуру:" />
    <TextField fx:id="text_choose_shape" prefHeight="28.0" prefWidth="780.0" />
+   <Label text="      1 - линия, 2 - прямоугольник, 3 - круг" />
    <ColorPicker fx:id="picker" onAction="#onColorButtonClick" prefHeight="37.0" prefWidth="181.0" />
 </VBox>

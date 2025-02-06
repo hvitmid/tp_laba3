@@ -7,8 +7,9 @@ public class MyCircle extends MyShape{
     double length;
     double width;
 
-    public MyCircle(Color color, double x, double y, double length, double width) {
-        super(color, x, y);
+    public MyCircle(double x, double y, double length, double width) {
+        super(x, y);
+        this.color = getColor();
         this.length = length;
         this.width = width;  }
 
