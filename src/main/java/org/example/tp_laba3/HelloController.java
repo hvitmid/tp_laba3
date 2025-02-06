@@ -178,9 +178,6 @@ public class HelloController implements Initializable {
             shape.setPosition(currentWidth, currentHeight);
             gc.clearRect(0, 0, canvas.getWidth(), canvas.getHeight());
             shape.draw(gc);
-//            shape = shapeFactory.createShape(Integer.parseInt(text_choose_shape.getText()),x, y , Math.abs(currentWidth), Math.abs(currentHeight));
-//            this.gc = canvas.getGraphicsContext2D();
-//            shape.draw(this.gc);
         }
     }
 
